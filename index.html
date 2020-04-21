@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel="shortcut icon" href="./favico-72x72.png">
 
   <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto:700');
@@ -10,7 +11,6 @@
       margin: 0px;
       font-family: 'Roboto';
       text-align: center;
-      display: flex;justify-content: center;align-items: center;
     }
 
     #container {
@@ -20,6 +20,12 @@
       font-weight: bold;
       width: 100%;
       display: block;
+    }
+
+    .dis-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     #flip {
@@ -94,40 +100,89 @@
       margin-top: 200px;
     }
 
-    img{
-      width:calc(100vw - 880px)
+    .back-img {
+      width: calc(100vw - 982px)
+    }
+
+    .logo {
+      width: auto;
+      height: 62px;
+      margin-left: 20px;
+    }
+
+    .header{
+      height: 100px;
+      width: 100%;background-color: #f7fdff; justify-content: space-between;
+    }
+
+    .detail-key{
+      font-size: 20px;color: #0080bb;
+    }
+
+    .detail-value{
+      font-size: 20px;color: #6c6f70;
     }
 
     @media only screen and (max-width: 980px) {
-      body{
+      .dis-flex {
         flex-wrap: wrap;
       }
-      img{
-        width:calc(100vw - 115px)
+
+      .back-img {
+        width: calc(100vw - 115px)
       }
-}
+
+      .logo {
+        height: 110px;
+      }
+      .header{
+        height: 200px;
+      }
+      .detail-key{
+        font-size: 32px;
+      }
+      .detail-value{
+        font-size: 32px;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div>
-    <img src="./back.png" style=""/>
-  </div>
-  <div id=container>
-    Something
-    <div id=flip>
-      <div>
-        <div>New</div>
+  <div class="dis-flex header">
+    <img src="Logo-01.png" class="logo" />
+    <div style="margin-right: 20px;">
+      <div style="display: flex;flex-wrap: wrap;">
+        <span class="detail-key">Phone : </span>
+        <span class="detail-value">+91 9848065806</span>
       </div>
-      <div>
-        <div>Awesome</div>
-      </div>
-      <div>
-        <div>Innovative</div>
+      <div style="display: flex;flex-wrap: wrap;">
+        <span class="detail-key">Email : </span>
+        <span class="detail-value">maringantikc@gmail.com</span>
       </div>
     </div>
-    is on its way...
   </div>
+  <div class="dis-flex">
+    <div>
+      <img src="./back.png" class="back-img" />
+    </div>
+    <div id=container>
+      Something
+      <div id=flip>
+        <div>
+          <div>New</div>
+        </div>
+        <div>
+          <div>Awesome</div>
+        </div>
+        <div>
+          <div>Innovative</div>
+        </div>
+      </div>
+      is on its way...
+    </div>
+  </div>
+
 </body>
 
 </html>
